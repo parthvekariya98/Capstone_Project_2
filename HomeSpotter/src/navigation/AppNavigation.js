@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import LoginScreen from '../screens/LoginScreen';
+import ForgotPassword from '../screens/ForgotPassword';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +13,7 @@ const AppNavigation = () => {
 			<Stack.Navigator>
 				<Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: false }} />
                 <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="ForgotPassword" component={ForgotPassword} options={{ headerShown: false }} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

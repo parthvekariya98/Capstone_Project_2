@@ -1,57 +1,33 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, Image, StyleSheet, TextInput } from 'react-native';
+import { View, TouchableOpacity, Text, Image, StyleSheet, TextInput, SafeAreaView } from 'react-native';
 import colors from '../helpers/colors';
 
-const LoginScreen = ({ navigation }) => {
+const ForgotPassword = ({ navigation }) => {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View style={styles.topView}>
-                <Text style={styles.secondText}>Login</Text>
+                <Text style={styles.secondText}>Forgot Password?</Text>
+                <Text style={{...styles.alText, marginBottom: '10%'}}>Recover your password if you have forgot the password!</Text>
+                
                 <Text style={styles.alText}>Email</Text>
                 <View style={styles.inputView}>
                     <Image source={require('../assets/images/ic_email.png')} style={styles.icon} />
                     <TextInput style={styles.input} placeholder="abc@example.com" />
                 </View>
-                <Text style={styles.alText}>Your Password</Text>
-                <View style={styles.inputView}>
-                    <Image source={require('../assets/images/ic_password.png')} style={styles.icon} />
-                    <TextInput style={styles.input} placeholder="********" />
-                </View>
-                <TouchableOpacity onPress={() => { navigation.navigate('ForgotPassword') }}>
-                    <Text style={styles.loginText}>Forgot Password?</Text>
-                </TouchableOpacity>
             </View>
             <TouchableOpacity
                 style={styles.mainButton}
                 onPress={() => { }}
             >
-                <Text style={styles.buttonText2}>Login</Text>
+                <Text style={styles.buttonText2}>Submit</Text>
             </TouchableOpacity>
-            <View style={styles.lineSeperator} />
-
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => { }}
-            >
-                <View style={styles.buttonContent}>
-                    <Image
-                        source={require('../assets/images/ic_google.png')}
-                        style={styles.icon}
-                    />
-                    <Text style={styles.buttonText}>Sign Up with Google</Text>
-                </View>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => { }}>
-                <Text style={styles.alText}>Don’t have an account? <Text style={styles.loginText}>Register</Text></Text>
-            </TouchableOpacity>
-        </View>
+        </SafeAreaView>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white'
     },
@@ -59,7 +35,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         width: '90%',
-        marginBottom: 15
+        marginTop: '10%'
     },
     inputView: {
         backgroundColor: 'white',
@@ -71,13 +47,6 @@ const styles = StyleSheet.create({
         marginVertical: 8,
         width: '100%',
         flexDirection: 'row',
-    },
-    lineSeperator: {
-        height: 1,
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        width: '90%',
-        marginVertical: 20
     },
     button: {
         backgroundColor: 'white',
@@ -97,11 +66,6 @@ const styles = StyleSheet.create({
         marginVertical: 8,
         width: '90%',
         marginHorizontal: '5%',
-    },
-    buttonContent: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
     },
     buttonText: {
         fontSize: 17,
@@ -123,15 +87,7 @@ const styles = StyleSheet.create({
     alText: {
         fontSize: 17,
         fontWeight: '300',
-        textAlign: 'center',
-        marginTop: 15
-    },
-    loginText: {
-        fontSize: 17,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        color: colors.app_color,
-        textDecorationLine: 'underline',
+        marginTop: 5
     },
     icon: {
         width: 24,
@@ -140,8 +96,8 @@ const styles = StyleSheet.create({
     },
     input: {
         fontSize: 18,
-        textAlign:'center'
-    },
+        textAlign: 'center'
+    }
 });
 
-export default LoginScreen;
+export default ForgotPassword;
