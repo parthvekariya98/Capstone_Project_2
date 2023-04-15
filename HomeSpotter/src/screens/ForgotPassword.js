@@ -48,17 +48,6 @@ const styles = StyleSheet.create({
         width: '100%',
         flexDirection: 'row',
     },
-    button: {
-        backgroundColor: 'white',
-        borderColor: 'black',
-        borderRadius: 10,
-        borderWidth: 1,
-        paddingVertical: 15,
-        paddingHorizontal: 20,
-        marginVertical: 8,
-        width: '90%',
-        marginHorizontal: '5%',
-    },
     mainButton: {
         backgroundColor: colors.app_color,
         borderRadius: 10,
@@ -66,11 +55,6 @@ const styles = StyleSheet.create({
         marginVertical: 8,
         width: '90%',
         marginHorizontal: '5%',
-    },
-    buttonText: {
-        fontSize: 17,
-        fontWeight: 'bold',
-        textAlign: 'center',
     },
     buttonText2: {
         fontSize: 17,

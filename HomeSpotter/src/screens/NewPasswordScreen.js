@@ -2,23 +2,24 @@ import React from 'react';
 import { View, TouchableOpacity, Text, Image, StyleSheet, TextInput, SafeAreaView } from 'react-native';
 import colors from '../helpers/colors';
 
-const ForgotVerification = ({ navigation }) => {
+const NewPasswordScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.topView}>
-                <Text style={styles.secondText}>Forgot Password?</Text>
-                <Text style={{...styles.alText, marginBottom: '10%'}}>We have sent an email to your email account with a verification code!</Text>
+                <Text style={styles.secondText}>Reset Password?</Text>
+                <Text style={{...styles.alText, marginBottom: '10%'}}>Set your new password to login into your account!</Text>
                 
-                <Text style={styles.alText}>Verification Code</Text>
+                <Text style={styles.alText}>Enter New Password</Text>
                 <View style={styles.inputView}>
-                    <TextInput style={styles.input} placeholder="EX: 123456" />
+                    <Image source={require('../assets/images/ic_password.png')} style={styles.icon} />
+                    <TextInput style={styles.input} placeholder="*******" />
                 </View>
             </View>
             <TouchableOpacity
                 style={styles.mainButton}
-                onPress={() => { navigation.navigate('NewPasswordScreen') }}
+                onPress={() => { }}
             >
-                <Text style={styles.buttonText2}>Submit</Text>
+                <Text style={styles.buttonText2}>Confirm</Text>
             </TouchableOpacity>
         </SafeAreaView>
     );
@@ -42,9 +43,10 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         paddingVertical: 15,
+        paddingHorizontal: 15,
         marginVertical: 8,
         width: '100%',
-        justifyContent: 'center',
+        flexDirection: 'row',
     },
     mainButton: {
         backgroundColor: colors.app_color,
@@ -71,10 +73,15 @@ const styles = StyleSheet.create({
         fontWeight: '300',
         marginTop: 5
     },
+    icon: {
+        width: 24,
+        height: 24,
+        marginRight: 10
+    },
     input: {
         fontSize: 18,
         textAlign: 'center'
     }
 });
 
-export default ForgotVerification;
+export default NewPasswordScreen;
