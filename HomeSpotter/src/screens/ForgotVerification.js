@@ -2,22 +2,21 @@ import React from 'react';
 import { View, TouchableOpacity, Text, Image, StyleSheet, TextInput, SafeAreaView } from 'react-native';
 import colors from '../helpers/colors';
 
-const ForgotPassword = ({ navigation }) => {
+const ForgotVerification = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.topView}>
                 <Text style={styles.secondText}>Forgot Password?</Text>
-                <Text style={{...styles.alText, marginBottom: '10%'}}>Recover your password if you have forgot the password!</Text>
+                <Text style={{...styles.alText, marginBottom: '10%'}}>We have sent an email to your email account with a verification code!</Text>
                 
-                <Text style={styles.alText}>Email</Text>
+                <Text style={styles.alText}>Verification Code</Text>
                 <View style={styles.inputView}>
-                    <Image source={require('../assets/images/ic_email.png')} style={styles.icon} />
-                    <TextInput style={styles.input} placeholder="abc@example.com" />
+                    <TextInput style={styles.input} placeholder="EX: 123456" />
                 </View>
             </View>
             <TouchableOpacity
                 style={styles.mainButton}
-                onPress={() => { navigation.navigate('ForgotVerification') }}
+                onPress={() => { }}
             >
                 <Text style={styles.buttonText2}>Submit</Text>
             </TouchableOpacity>
@@ -43,10 +42,9 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         borderWidth: 1,
         paddingVertical: 15,
-        paddingHorizontal: 15,
         marginVertical: 8,
         width: '100%',
-        flexDirection: 'row',
+        justifyContent: 'center',
     },
     button: {
         backgroundColor: 'white',
@@ -89,15 +87,10 @@ const styles = StyleSheet.create({
         fontWeight: '300',
         marginTop: 5
     },
-    icon: {
-        width: 24,
-        height: 24,
-        marginRight: 10
-    },
     input: {
         fontSize: 18,
         textAlign: 'center'
     }
 });
 
-export default ForgotPassword;
+export default ForgotVerification;
