@@ -2,7 +2,7 @@ import React from 'react';
 import { View, TouchableOpacity, Text, Image, StyleSheet } from 'react-native';
 import colors from '../helpers/colors';
 
-const WelcomeScreen = () => {
+const WelcomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.topView}>
@@ -25,7 +25,7 @@ const WelcomeScreen = () => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
-                onPress={() => { }}
+                onPress={() => { navigation.navigate('LoginScreen') }}
             >
                 <View style={styles.buttonContent}>
                     <Image
