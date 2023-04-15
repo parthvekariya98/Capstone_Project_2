@@ -6,7 +6,7 @@ const NewPasswordScreen = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.topView}>
-                <Text style={styles.secondText}>Reset Password?</Text>
+                <Text style={styles.secondText}>Forgot Password?</Text>
                 <Text style={{...styles.alText, marginBottom: '10%'}}>Set your new password to login into your account!</Text>
                 
                 <Text style={styles.alText}>Enter New Password</Text>
