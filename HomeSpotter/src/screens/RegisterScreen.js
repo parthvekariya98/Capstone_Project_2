@@ -1,57 +1,46 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, Image, StyleSheet, TextInput } from 'react-native';
+import { View, TouchableOpacity, Text, Image, StyleSheet, TextInput, SafeAreaView } from 'react-native';
 import colors from '../helpers/colors';
 
-const LoginScreen = ({ navigation }) => {
+const RegisterScreen = ({ navigation }) => {
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <View style={styles.topView}>
-                <Text style={styles.secondText}>Login</Text>
+                <Text style={styles.secondText}>Register</Text>
+                <Text style={{...styles.alText, marginTop: 1, marginBottom:10}}>Create an account to access all the features of HomeSpotter!</Text>
                 <Text style={styles.alText}>Email</Text>
                 <View style={styles.inputView}>
                     <Image source={require('../assets/images/ic_email.png')} style={styles.icon} />
                     <TextInput style={styles.input} placeholder="abc@example.com" />
+                </View>
+                <Text style={styles.alText}>Your Name</Text>
+                <View style={styles.inputView}>
+                    <Image source={require('../assets/images/ic_user.png')} style={styles.icon} />
+                    <TextInput style={styles.input} placeholder="jack sparrow" />
                 </View>
                 <Text style={styles.alText}>Your Password</Text>
                 <View style={styles.inputView}>
                     <Image source={require('../assets/images/ic_password.png')} style={styles.icon} />
                     <TextInput style={styles.input} placeholder="********" />
                 </View>
-                <TouchableOpacity onPress={() => { navigation.navigate('ForgotPassword') }}>
-                    <Text style={styles.loginText}>Forgot Password?</Text>
-                </TouchableOpacity>
+                
             </View>
             <TouchableOpacity
                 style={styles.mainButton}
                 onPress={() => { }}
             >
-                <Text style={styles.buttonText2}>Login</Text>
+                <Text style={styles.buttonText2}>Register</Text>
             </TouchableOpacity>
-            <View style={styles.lineSeperator} />
-
-            <TouchableOpacity
-                style={styles.button}
-                onPress={() => { }}
-            >
-                <View style={styles.buttonContent}>
-                    <Image
-                        source={require('../assets/images/ic_google.png')}
-                        style={styles.icon}
-                    />
-                    <Text style={styles.buttonText}>Sign Up with Google</Text>
-                </View>
+            <TouchableOpacity onPress={() => { }}>
+                <Text style={styles.alText}>Already have an account? <Text style={styles.loginText}>Login</Text></Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => { navigation.navigate('RegisterScreen') }}>
-                <Text style={styles.alText}>Don’t have an account? <Text style={styles.loginText}>Register</Text></Text>
-            </TouchableOpacity>
-        </View>
+        </SafeAreaView>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white'
     },
@@ -59,6 +48,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
         width: '90%',
+        marginTop: '10%',
         marginBottom: 15
     },
     inputView: {
@@ -72,24 +62,6 @@ const styles = StyleSheet.create({
         width: '100%',
         flexDirection: 'row',
     },
-    lineSeperator: {
-        height: 1,
-        borderBottomWidth: 1,
-        borderBottomColor: 'black',
-        width: '90%',
-        marginVertical: 20
-    },
-    button: {
-        backgroundColor: 'white',
-        borderColor: 'black',
-        borderRadius: 10,
-        borderWidth: 1,
-        paddingVertical: 15,
-        paddingHorizontal: 20,
-        marginVertical: 8,
-        width: '90%',
-        marginHorizontal: '5%',
-    },
     mainButton: {
         backgroundColor: colors.app_color,
         borderRadius: 10,
@@ -97,16 +69,6 @@ const styles = StyleSheet.create({
         marginVertical: 8,
         width: '90%',
         marginHorizontal: '5%',
-    },
-    buttonContent: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    buttonText: {
-        fontSize: 17,
-        fontWeight: 'bold',
-        textAlign: 'center',
     },
     buttonText2: {
         fontSize: 17,
@@ -123,7 +85,6 @@ const styles = StyleSheet.create({
     alText: {
         fontSize: 17,
         fontWeight: '300',
-        textAlign: 'center',
         marginTop: 15
     },
     loginText: {
@@ -144,4 +105,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default LoginScreen;
+export default RegisterScreen;
