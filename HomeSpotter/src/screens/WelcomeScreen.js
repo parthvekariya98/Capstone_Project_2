@@ -25,7 +25,7 @@ const WelcomeScreen = ({ navigation }) => {
             </TouchableOpacity>
             <TouchableOpacity
                 style={styles.button}
-                onPress={() => { navigation.navigate('LoginScreen') }}
+                onPress={() => { navigation.navigate('RegisterScreen') }}
             >
                 <View style={styles.buttonContent}>
                     <Image
@@ -35,7 +35,7 @@ const WelcomeScreen = ({ navigation }) => {
                     <Text style={styles.buttonText}>Sign Up with Email</Text>
                 </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => { }}>
+            <TouchableOpacity onPress={() => { navigation.navigate('LoginScreen') }}>
                 <Text style={styles.alText}>Already have an account? <Text style={styles.loginText}>Login</Text></Text>
             </TouchableOpacity>
         </View>

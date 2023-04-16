@@ -27,11 +27,11 @@ const RegisterScreen = ({ navigation }) => {
             </View>
             <TouchableOpacity
                 style={styles.mainButton}
-                onPress={() => { }}
+                onPress={() => { navigation.navigate('RegisterVerification') }}
             >
                 <Text style={styles.buttonText2}>Register</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => { }}>
+            <TouchableOpacity onPress={() => { navigation.navigate('LoginScreen') }}>
                 <Text style={styles.alText}>Already have an account? <Text style={styles.loginText}>Login</Text></Text>
             </TouchableOpacity>
         </SafeAreaView>
