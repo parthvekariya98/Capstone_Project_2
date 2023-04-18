@@ -16,7 +16,7 @@ const RegisterVerification = ({ navigation }) => {
             </View>
             <TouchableOpacity
                 style={styles.mainButton}
-                onPress={() => { }}
+                onPress={() => { navigation.navigate('HomeScreen') }}
             >
                 <Text style={styles.buttonText2}>Register</Text>
             </TouchableOpacity>

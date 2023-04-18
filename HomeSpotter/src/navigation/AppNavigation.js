@@ -8,6 +8,7 @@ import ForgotVerification from '../screens/ForgotVerification';
 import NewPasswordScreen from '../screens/NewPasswordScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import RegisterVerification from '../screens/RegisterVerification';
+import HomeScreen from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ const AppNavigation = () => {
                 <Stack.Screen name="ForgotPassword" component={ForgotPassword} options={{ headerShown: false }} />
                 <Stack.Screen name="ForgotVerification" component={ForgotVerification} options={{ headerShown: false }} />
                 <Stack.Screen name="NewPasswordScreen" component={NewPasswordScreen} options={{ headerShown: false }} />
+				<Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

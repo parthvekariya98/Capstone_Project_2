@@ -1,10 +1,10 @@
 import React from 'react';
 import AppNavigation from './src/navigation/AppNavigation';
 
-function HelloWorld() {
+function App() {
   return (
     <AppNavigation />
   );
 }
 
-export default HelloWorld;
+export default App;
